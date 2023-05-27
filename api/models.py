@@ -4,12 +4,8 @@ from django.contrib.auth import authenticate
 
 
 class User(AbstractUser):
-    pass
-
-
-def login_view(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = authenticate(request, username=username, password=password)
+    username= models.CharField(max_length=100, unique=True)
+    password= models.CharField(max_length=100, unique=True)
+    
+    USERNAME_FIELD = "username"
+    REQUIRED_FIELDS = ['password']

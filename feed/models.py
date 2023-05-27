@@ -1,7 +1,7 @@
 from django.db import models
 from publi.models import *
 
-class posts(models.Model):
+class Posts(models.Model):
     feed= models.ForeignKey(publi, on_delete=models.CASCADE)
 
         

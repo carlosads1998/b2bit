@@ -3,12 +3,12 @@ from . import models
 from . import serializers
 from rest_framework import generics, permissions
 
-class PubliApi(generics.ListCreateAPIView):
+class PublicationListApi(generics.ListCreateAPIView):
     queryset=models.publi.objects.all()
     serializer_class= serializers.publiSerializers
     #permission_classes=(permissions.IsAuthenticated,)
 
-class PubliView(generics.RetrieveUpdateDestroyAPIView):
+class PublicationDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset=models.publi.objects.all()
     serializer_class= serializers.publiSerializers
     #permission_classes=(permissions.IsAuthenticated,)
