@@ -2,6 +2,7 @@ from django.db import models
 from api.models import User
 
 class publi(models.Model):
+    imagem= models.ImageField(upload_to='imagens_feed', blank=True, null=True)
     author= models.ForeignKey(User, on_delete=models.CASCADE)
     published= models.TextField(max_length=256)
     date= models.DateField(auto_now_add=True)
