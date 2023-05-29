@@ -5,3 +5,4 @@ class feedSerializer(serializers.ModelSerializer):
     class Meta:
         model= models.publi
         fields= ('__all__')
+        

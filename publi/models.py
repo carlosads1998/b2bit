@@ -2,7 +2,7 @@ from django.db import models
 from api.models import User
 
 class publi(models.Model):
-    user= models.ForeignKey(User, on_delete=models.CASCADE)
+    author= models.ForeignKey(User, on_delete=models.CASCADE)
     published= models.TextField(max_length=256)
     date= models.DateField(auto_now_add=True)
     update= models.DateField(auto_now=True)
